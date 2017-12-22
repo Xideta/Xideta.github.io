@@ -14,23 +14,24 @@ https://github.com/cadejscroggins/tilde
       [null, 'StartPage', '*', 'https://www.startpage.com/', '/do/search?query={}', '#111'],
       ['Work', 'GitHub', 'g', 'https://github.com', '/search?q={}', '#333'],
       ['Work', 'Inbox', 'I', 'https://inbox.google.com', '/search/{}', '#4285f4'],
-//      ['Work', 'Keep', 'k', 'https://keep.google.com', '/#search/text={}', '#fb0'],
-      ['Look', 'Photos', 'P', 'https://photos.google.com', '/search/{}', '#34a853'],
+      ['Work', 'LearnIT', 'l', 'https://learnit.itu.dk/', null, '#fb0'],
+      ['Look', 'Photos', 'P', 'https://photos.google.com', '/search/{}', '#5182BD'],
       ['Look', 'Unsplash', 'u', 'https://unsplash.com/new', '/search/{}', '#000'],
       ['Lurk', 'Facebook', 'f', 'https://www.facebook.com', '/search/top/?q={}', '#3b5998'],
       ['Lurk', 'Instagram', 'i', 'https://www.instagram.com', null, '#833ab4'],
       ['Lurk', 'Reddit', 'r', 'https://www.reddit.com', '/search?q={}', '#5f99cf'],
       ['Lurk', 'Twitter', 't', 'https://twitter.com', '/search?q={}', '#1da1f2'],
+      ['Products', 'Komplett', 'ko', 'https://www.komplett.dk/', '/search?q={}', '#F8B912'],
+      ['Products', 'Just-Eat', 'j', 'https://www.just-eat.dk/', '/area/{}']
       ['Listen', 'Spotify', 's', 'https://open.spotify.com/', 'search/results/{}', '#83c441'],
       ['Listen', 'SoundCloud', 'sc', 'https://soundcloud.com/discover', '/search?q={}', '#ff8800'],
       ['Watch', 'Academy', 'A', 'https://www.khanacademy.org/', '/search?page_search_query={}', '#9cb443'],
+      ['Watch', 'KissAnime', 'ki', 'http://kissanime.ru/', null, '#00ADEE'],
       ['Watch', 'Netflix', 'n', 'https://www.netflix.com/browse', '/search?q={}', '#e50914'],
       ['Watch', 'Twitch', 'T', 'https://www.twitch.tv/directory/following', null, '#6441a5'],
       ['Watch', 'YouTube', 'y', 'https://youtube.com/feed/subscriptions', '/results?search_query={}', '#cd201f'],
-//      ['Download', '7digital', '7', 'https://us.7digital.com', '/search?q={}', '#07606e'],
       ['Download', '1337x', '1337', 'https://1337x.to', '/search/{}', '#00d1b2'],
       ['Download', 'Pirate Bay', 'b', 'https://thepiratebay.org', '/search/{}', '#4c4132'],
-//      ['Download', 'YTS', 'Y', 'https://yts.gs/browse-movies/all/1080p/all/7/latest', '/browse-movies/{}', '#2f2f2f'],
     ],
 
     // give suggestions as you type
@@ -50,11 +51,13 @@ https://github.com/cadejscroggins/tilde
     ],
 
     // default search suggestions for the specified queries
-    defaultSuggestions: {
+	// template 
+//      '': ['', '', '', '', '']
+	  defaultSuggestions: {
       'g': ['g/issues', 'g/pulls', 'gist.github.com', 'g/cadejscroggins', 'g/cadejscroggins/tilde'],
-//      'l': ['l:electronic', 'l:chill', 'l:focus', 'l:sleep', 'l:ambient'],
+      'j': ['j/2990'],
       'r': ['r/r/news', 'r/r/talesfromtechsupport', 'r/r/firefox', 'r/r/technology', 'r/r/Denmark'],
-//      's': ['s/you/likes', 's/discover/the-upload'],
+
     },
 
     // instantly redirect when a key is matched

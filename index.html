@@ -24,7 +24,7 @@ https://github.com/cadejscroggins/tilde
       ['Listen', 'Spotify', 's', 'https://open.spotify.com/', 'search/results/{}', '#83c441'],
       ['Listen', 'SoundCloud', 'sc', 'https://soundcloud.com/discover', '/search?q={}', '#ff8800'],
       ['Watch', 'Academy', 'A', 'https://www.khanacademy.org/', '/search?page_search_query={}', '#9cb443'],
-      ['Watch', 'KissAnime', 'ki', 'http://kissanime.ru/', null, '#00ADEE'],
+      ['Watch', 'KissAnime', 'ki', 'https://www.kissanime.ru/', null, '#00ADEE'],
       ['Watch', 'Netflix', 'n', 'https://www.netflix.com/browse', '/search?q={}', '#e50914'],
       ['Watch', 'Twitch', 'T', 'https://www.twitch.tv/directory/following', null, '#6441a5'],
       ['Watch', 'YouTube', 'y', 'https://youtube.com/feed/subscriptions', '/results?search_query={}', '#cd201f'],
@@ -198,16 +198,19 @@ https://github.com/cadejscroggins/tilde
     font-weight: 400;
   }
 
-  .search-suggestion b::after {
+ /* .search-suggestion b::after {
     content: ' ';
     position: absolute;
     top: 51%;
     right: 0;
     left: 0;
     height: 3px;
-    background-color: #00f; /* HERE */
+    background-color: #FFF;
     opacity: .8;
-  }
+  }*/
+    .search-suggestion b::after{
+     display: hidden;   
+    }
 
   .search-suggestion.highlight b::after {
     opacity: 0;
@@ -216,7 +219,7 @@ https://github.com/cadejscroggins/tilde
   #help {
     display: block;
     padding: 8vw;
-    background: #00f; /* HERE */
+    background: #FFF;
     font-size: 1.3rem;
     z-index: 1;
   }
@@ -256,7 +259,7 @@ https://github.com/cadejscroggins/tilde
     margin-right: 1em;
     border-radius: 50%;
     background-color: #222;
-    color: #00f; /* HERE */
+    color: #FFF;
     font-size: .8em;
     text-align: center;
   }

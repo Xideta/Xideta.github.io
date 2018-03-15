@@ -6,6 +6,7 @@ html, body {
     height: 100% !important;
 	border: 0 hidden !important;
 	overflow-y:hidden;
+    min-width: 600px;
 }
 
 body {
@@ -23,15 +24,21 @@ body {
 
 div.imgwrapper{
     display:table-row;
-    height:0px; /* take as little as possible, 
-                   while still fitting content */
+    height:0;
+}
+
+div.imgwrapper img {
+    display:table-cell;
+    width:100%;
 }
 
 #wrapper {
 	display:table-cell;
 	background-color: #FFF;
-    min-width: 100%;
+    width: 10%;
 	height:100%;
+    padding-left: 10%;
+    padding-right: 10%;
 
 }
 
@@ -39,16 +46,13 @@ p {
     display: block;
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
-    margin: inherit;
     padding: 2px;
+    margin: 0 0 15px;
     line-height: 120%;
 
 }
 
-img {
-	display:table-cell;
-	width:100%;
-}
+
 
 table {
     width: 80%;
@@ -109,9 +113,8 @@ fieldset {
 }
 
 fieldset label{
-    padding-right: 5px;
+    padding:0.3125em;
     text-align: left;
-    vertical-align: middle;
 }
 
 fieldset input{
@@ -219,13 +222,17 @@ h1 {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 1.5em;
     font-family: 'Bitter', serif;
+    border: 0 hidden !important;
+    text-align: center;
+    padding: 5px;
 }
 
 a {
     font-family: 'Open Sans', sans-serif;
     font-size: inherit;
+    color: #00E5EE; !important;
 }
 
 a:link {
@@ -271,9 +278,38 @@ nav a:hover{
 	color: #F17D15 !important;
 }
 
-.post {
+div.post {
     text-align: justify;
-    padding-left:13%;
-	padding-right:13%;
-	
+    display: table-cell;
 }
+
+div.post p{
+    float: left;
+}
+
+div.post img{
+    float: right;
+    padding: 5px;
+}
+
+div.gallery {
+    display: table;
+}
+
+div.galleryRow {
+    display: table-row;
+}
+
+div.galleryItem{
+    display: table-cell;
+    text-align: justify;
+    margin: 10px;
+    padding: 3%;
+}
+
+div.galleryItem img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+

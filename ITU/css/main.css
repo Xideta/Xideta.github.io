@@ -118,6 +118,7 @@ div.inputForm {
 }
 
 fieldset {
+    border: 0 hidden !important;
 }
 fieldset p{
     display: table-row;

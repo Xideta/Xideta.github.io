@@ -46,7 +46,7 @@
         const message = messageInput.value;
         const email = emailInput.value;
         alert("Greetings "+ name +", thank you for your message, wherein you wrote:\n "+ message +"\n" +
-            "We'll respond to your question by mailing "+ email +" ASAP.")
+            "We'll respond to your question by mailing "+ email +" ASAP.");
         nameInput.value='';
         emailInput.value='';
         messageInput.value=''

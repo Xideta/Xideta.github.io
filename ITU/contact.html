@@ -25,29 +25,28 @@
         <div style="text-align: center;">
             <h1>Contact Us!</h1><br/>
         </div>
-        <div class="post">
+        <div class="inputForm">
             <p>
                 Please enter your contact information.
             </p>
-            <form action="javascript:email();">
+            <form action="javascript:void()" id="mailForm">
                 <fieldset>
-                    <p><label for="nameInput">Name: </label><input type="text" id="nameInput" placeholder="Jon Doe"
-                                                                   autocomplete="name" required/></p><br/>
-                    <p><label for="emailInput">Email: </label><input type="text" id="emailInput"
-                                                                     placeholder="jon@doe.com" autocomplete="email" required/></p><br/>
-                    <p><label for="messageInput">Message: </label><input type="text" id="messageInput" placeholder="Message"
-                                                                    required/></p><br/>
+                    <p><label for="nameInput">Name: </label><br/><input type="text" id="nameInput" placeholder="Jon Doe"
+                                                                   autocomplete="name" required oninput="toggleBoolName()"/></p><br/>
+                    <p><label for="emailInput">Email: </label><br/><input type="text" id="emailInput"
+                                                                     placeholder="jon@doe.com" autocomplete="email" required oninput="toggleBoolEmail()"/></p><br/>
+                    <p><label for="messageInput">Message: </label><br/><textarea id="messageInput" rows="5" cols="40" name="comment" form="mailForm" placeholder="Enter text here..." required oninput="toggleBoolMessage()"></textarea>
+
                 </fieldset>
                 <br/>
-                <input type="submit" id="send" value="Send"/>
-
+                <input type="button" onclick="email()" id="send" value="Send"/>
+                <script type="text/javascript">
+                    window.onload = disableButton();
+                </script>
                 <br/>
             </form>
-            <table>
-
-            </table>
+        </div>
         </div>
     </div>
-</div>
 </body>
 </html>

@@ -25,8 +25,12 @@
     //If there's any email that matches a specific regex, set a boolean to true
     function toggleBoolEmail() {
         const emailInput = document.getElementById('emailInput');
-        const regex = /([\w]*\+*\.*)*@([\w]*\+*).([a-zA-Z]*)/;
-        booleanEmail = emailInput.value.match(regex).length > 0;
+        const regex = /(\w*\+*\.*@\w*\.[\w\.]*)/g;
+        if(emailInput.value.match(regex)!=null){
+			booleanEmail = true;
+		} else {
+			booleanEmail = false;
+		}
         checkButton();
     }
     //If there's any string in message, set a boolean to true

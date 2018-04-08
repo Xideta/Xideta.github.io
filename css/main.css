@@ -142,10 +142,19 @@ div.galleryItem img{
     grid-column: 2/7;
     grid-row: 3;
     display: grid;
-    grid-template-rows: repeat(3,auto);
-    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(2,auto);
+    grid-template-columns: 1fr;
 }
 
+.inputForm p{
+    display: contents;
+    grid-row: 1;
+    grid-column: 1/4;
+}
+
+.inputForm form{
+    grid-row: 2;
+}
 
 input[type=submit], input[type=button] {
     padding: 8px 16px;

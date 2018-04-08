@@ -5,17 +5,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen"/>
     <link rel="icon" type="image/png" href="img/favicon.ico" sizes="16x16"/>
-    <link href="https://fonts.googleapis.com/css?family=Bitter|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Open+Sans" rel="stylesheet" />
     <title>ITU</title>
 </head>
 <body>
 <div class="container">
     <div class="imgwrapper">
         <a href="index.html">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Logo_IT_University_of_Copenhagen.jpg"
+            <img src="img/itu.svg"
                  alt="logo"
-                 width="100%"
-            >
+                 width="100%" />
         </a>
     </div>
     <div id="wrapper">
@@ -32,11 +31,12 @@
             <form action="javascript:email()" id="mailForm">
                 <fieldset>
                     <p><label for="nameInput">Name: </label><br/><input type="text" id="nameInput" placeholder="Jon Doe"
-                                                                   autocomplete="name" required /></p><br/>
+                                                                   autocomplete="name" required="required" /></p><br/>
                     <p><label for="emailInput">Email: </label><br/><input type="text" id="emailInput"
-                                                                     placeholder="jon@doe.com" autocomplete="email" required/></p><br/>
-                    <p><label for="messageInput">Message: </label><br/><textarea id="messageInput" rows="5" cols="40" name="comment" form="mailForm" placeholder="Enter text here..." required"></textarea>
+                                                                     placeholder="jon@doe.com" autocomplete="email" required="required"/></p><br/>
+                    <p><label for="messageInput">Message: </label><br/><textarea id="messageInput" rows="5" cols="40" name="comment" form="mailForm" placeholder="Enter text here..." required="required""></textarea>
 
+                </p>
                 </fieldset>
                 <br/>
                 <input type="button" id="send" value="Send"/>

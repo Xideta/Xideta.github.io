@@ -15,7 +15,7 @@ body {
     color:black;
     overflow-y:scroll;
     display: grid;
-    grid-template-rows: 0, auto, 0;
+    grid-template-rows: auto, auto, 0;
 }
 .imgcontainer {
     display: contents;
@@ -26,12 +26,11 @@ body {
 .imgcontainer img{
     width: 100%;
     height: auto;
-    max-height: 100%;
 }
 
 
 #wrapper {
-    grid-row: 2/1000000; /* ....Yes... It's hacky.... I couldn't get there not to be a space otherwise */
+    grid-row: 2/300000000; /* ....Yes... It's hacky.... I couldn't get there not to be a space otherwise */
 	background-color: #FFF;
     display: grid;
     grid-template-columns: repeat(7, 1fr);

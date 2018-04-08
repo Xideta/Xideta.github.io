@@ -1,0 +1,13 @@
+Efter sketchene blev tegnet valgte jeg et minimalistisk look til websiden.
+Der er gjort brug af CSS til styling af alle siderne. Specifikt er der blevet brugt CSS tables til nemmere at holde alt som det skulle være.
+Jeg valgte CSS-tables, da jeg gerne ville levere et ensartet, stilret, og moderne udseende, der havde god mulighed for nem udvidelse, og bred understøttelse. 
+Fonts fra fonts.google.com er også indlejret i websiden, hvilket tilføjer til sidens udseende.
+
+Der er minimalt brug af JavaScript på siden, så websiden også kan fungere hvis besøgene har det slået fra.
+
+Enkelte CSS og HTML attributter er ikke kompatible med Internet Explorer 8 og under.
+Dog påkræves teknologier der ikke findes i de versioner af PCI DDS (Payment Card Industry Data Security Standard), specifikt TLS v1.1 (Det der engang hed SSL). 
+Dette gør sandsynligvis at de enkelte brugere af disse versioner opgraderer til noget andet.
+
+
+Alternativt link: https://xideta.github.io/ITU/index.html

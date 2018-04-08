@@ -1,0 +1,2 @@
+# disable loading of readme.mds that are causing problems.
+/node_modules

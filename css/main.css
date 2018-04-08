@@ -15,37 +15,57 @@ body {
     color:black;
     overflow-y:scroll;
     display: grid;
+    grid-template-rows:repeat(3, auto);
+}
+.imgcontainer {
+    grid-row: 1/2;
+    font-size: 0;
 }
 
-.container {
-    display: table;
+.imgcontainer img{
     width: 100%;
     height: 100%;
 }
 
-
-div.imgwrapper{
-    display:table-row;
-    height:0;
-}
-
-div.imgwrapper img {
-    display:table-cell;
-    width:100%;
-}
-
 #wrapper {
-	display:table-cell;
+    grid-row: 2/3;
 	background-color: #FFF;
-    width: 10%;
-	height:100%;
-    padding-left: 10%;
-    padding-right: 10%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 5% , auto;
 
+}
+
+.nav {
+	text-align:center;
+    font-size:1.35em;
+    font-family: 'Bitter', serif;
+    padding: 5px 0 5px 0;
+}
+
+.nav:hover{
+	color: #F17D15 ;
+}
+
+.about{
+    grid-column: 2/3;
+}
+
+.useful{
+    grid-column: 4/5;
+
+}
+
+.contact{
+    grid-column: 6/7;
+}
+
+#pageContent {
+    text-align: center;
+    grid-column: 2/7;
 }
 
 p {
-    display: block;
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     padding: 2px;
@@ -55,22 +75,6 @@ p {
 }
 
 
-
-table {
-    width: 80%;
-    margin: 2% 10% 10%;
-
-}
-
-table, tr, td, th {
-    padding: 4px;
-    vertical-align: middle;
-}
-
-th {
-    font-size: 20px;
-    font-weight: 300;
-}
 
 input[type=submit], input[type=button] {
     padding: 8px 16px;
@@ -111,30 +115,8 @@ input[type=submit]:disabled, input[type=button]:disabled {
 
 }
 
-div.inputForm {
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
 fieldset {
     border: 0 hidden ;
-}
-fieldset p{
-    display: table-row;
-    text-align: center;
-}
-fieldset label{
-    display: table-cell;
-    text-align: left;
-    vertical-align: middle;
-    float: left;
-}
-
-fieldset input,textarea{
-    display: table-cell;
-    float: right;
 }
 
 .submit {
@@ -157,49 +139,6 @@ fieldset input,textarea{
 .submit:hover {
     background-color: #4CAF50;
     color: white;
-}
-
-ul, menu, dir {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    padding-inline-start: 40px;
-    -moz-padding-start: 40px;
-    -moz-margin-start: 1em;
-    -moz-margin-end: 1em;
-    -moz-margin-before: 1em;
-    -moz-margin-after: 1em;
-    -webkit-padding-start: 40px;
-    -webkit-margin-start: 1em;
-    -webkit-margin-end: 1em;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-}
-
-ol {
-    display: block;
-    text-align: left;
-    list-style-type: decimal;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    padding-inline-start: 40px;
-    -moz-padding-start: 40px;
-    -moz-margin-start: 1em;
-    -moz-margin-end: 1em;
-    -moz-margin-before: 1em;
-    -moz-margin-after: 1em;
-    -webkit-padding-start: 40px;
-    -webkit-margin-start: 1em;
-    -webkit-margin-end: 1em;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-}
-
-li {
-    display: list-item;
-    text-align: match-parent;
-    padding-left: 1em;
 }
 
 b, strong {
@@ -268,34 +207,11 @@ a:active {
     text-decoration: none;
 }
 
-nav {
-	padding-top:5px;
-	margin-bottom:5px;
-	display: table;
-    text-align:center;
-	width:100%;
-	font-size:1.35em;
-}
 
-nav p{
-	display:table-row;	
-}
-
-nav a{
-	display:table-cell;
-	font-family: 'Bitter', serif;
-	width:33%;
-	text-align:center;
-	
-}
-
-nav a:hover{
-	color: #F17D15 ;
-}
 
 div.post {
     text-align: justify;
-    display: table-cell;
+
 }
 
 div.post p{
@@ -308,15 +224,14 @@ div.post img{
 }
 
 div.gallery {
-    display: table;
+
 }
 
 div.galleryRow {
-    display: table-row;
+
 }
 
 div.galleryItem{
-    display: table-cell;
     text-align: justify;
     margin: 10px;
     padding: 3%;

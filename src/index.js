@@ -1,21 +1,8 @@
-    //Variables.
-    //Basically 3 locks on the submit button.
-    let booleanName = false;
-    let booleanEmail = false;
-    let booleanMessage = false;
-
+    import booleans from "./data.js";
+    import {disableButton, enableButton} from "./dom.js";
     //I had some issues with having the links to elements out in this scope, so now it's all local
 
-    //Disables the submit button
-    function disableButton(){
-        const butt = document.getElementById("send");
-        butt.disabled=true;
-    }
-    //Enables the submit button
-    function enableButton(){
-        const butt = document.getElementById("send");
-        butt.disabled=false;
-    }
+    
     //If there's any string in the name field, set a boolean to true
     function toggleBoolName() {
         const nameInput = document.getElementById('nameInput');

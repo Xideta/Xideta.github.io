@@ -14,6 +14,7 @@ body {
     background-color: #333333;
     color:black;
     overflow-y:scroll;
+    display: grid;
 }
 
 .container {

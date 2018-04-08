@@ -1,3 +1,11 @@
+#Handin2
+
+
+
+
+
+
+#Handin1
 Efter sketchene blev tegnet valgte jeg et minimalistisk look til websiden.
 Der er gjort brug af CSS til styling af alle siderne. Specifikt er der blevet brugt CSS tables til nemmere at holde alt som det skulle være.
 Jeg valgte CSS-tables, da jeg gerne ville levere et ensartet, stilret, og moderne udseende, der havde god mulighed for nem udvidelse, og bred understøttelse. 

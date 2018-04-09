@@ -5,7 +5,6 @@ html, body {
     height: 100% ;
 	border: 0 hidden;
 	overflow-y:hidden;
-    min-width: 600px;
     margin: 0;
     padding: 0;
 }
@@ -14,31 +13,98 @@ body {
     background-color: #333333;
     color:black;
     overflow-y:scroll;
-    display: grid;
-    grid-template-rows: auto, auto, 0;
 }
-.imgcontainer {
-    display: contents;
-    grid-row: 1;
+
+/* 
+    Credit for Grid Holy grail goes to https://bitsofco.de/holy-grail-layout-css-grid/
+
+    I initially made one myself, got 90% done, but had a bug that was unfixable.
+    Basically, if the content wasn't larger than the screen, the grid would dissapear.
+
+*/
+
+.hg__header { grid-area: header; background-color: black; }
+.hg__footer { 
+    position: relative;
+    grid-area: footer;background-color: #FFF;
+    text-align: center;
+    z-index: 1;
+}
+.hg__main { grid-area: main; background-color: #FFF; }
+.hg__left { grid-area: navigation; background-color: #333; color: #FFF; padding-left:5%;}
+.hg__footer:before{
+    display:block;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 200px;
+    height: 30px;
+    content:"";
+    background-color: #333;
+}
+.hg__right { grid-area: ads;  background-color: #FFF;}
+
+.hg {
+	display: grid;
+	grid-template-areas: "header header header"
+	                     "navigation main ads"
+	                     "footer footer footer";
+	grid-template-columns: 200px 1fr 150px;
+	grid-template-rows: 100px 
+						1fr
+						30px;
+	min-height: 100vh;
+}
+
+@media screen and (max-width: 600px) {
+	.hg {
+		grid-template-areas: "header"
+		                     "navigation"
+		                     "main"
+		                     "ads"
+		                     "footer";
+		grid-template-columns: 100%;
+		grid-template-rows: 100px 
+							50px 
+							1fr
+							50px 
+                            30px;
+    }
+
+    .hg__footer:before{
+        display:none;
+    }
+
+    nav{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 100%;
+        text-align: center;
+        
+    }
+    nav p{
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%)
+    }
+    .navHead{
+        display: none;
+    }
+}
+
+.navHead{
+    padding-top:5%;
+    font-size: 1.5em;
+    font-family: 'Bitter', serif;
+}
+
+
+.headerimg {
     font-size: 0;
-}
-
-.imgcontainer img{
     width: 100%;
-    height: auto;
+    height: 100px;;
 }
 
-
-#wrapper {
-    grid-row: 2/300000000; /* ....Yes... It's hacky.... I couldn't get there not to be a space otherwise */
-	background-color: #FFF;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(3,auto);
-    height: auto;
-    widows: 100%;
-
-}
 
 .nav {
 	text-align:center;
@@ -48,21 +114,10 @@ body {
 }
 
 .nav:hover{
-	color: #F17D15 ;
+    color: #F17D15;
+    padding: 5px 0 5px 0;
 }
 
-.about{
-    grid-column: 2/3;
-}
-
-.useful{
-    grid-column: 4/5;
-
-}
-
-.contact{
-    grid-column: 6/7;
-}
 
 #pageContent {
     text-align: center;
@@ -75,12 +130,6 @@ body {
 h1 {
     grid-row: 2/3;
     font-size: 3em;
-    font-family: 'Bitter', serif;
-	border: 0 hidden ;
-}
-
-h2 {
-    font-size: 1.5em;
     font-family: 'Bitter', serif;
     border: 0 hidden ;
 }
@@ -147,7 +196,7 @@ div.inputForm{
     display: grid;
     grid-template-rows: repeat(2,auto);
     grid-template-columns: 1fr;
-    grid-gap: 10px;
+    vertical-align: top;
 }
 
 div.inputForm p{
@@ -278,4 +327,11 @@ a:hover {
 
 a:active {
     text-decoration: none;
+}
+
+#footer{
+    grid-row: 3;
+    bottom: 0;
+    background-color: #FFF;
+    text-align: center;
 }

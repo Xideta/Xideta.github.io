@@ -44,6 +44,9 @@ import {disableButton, enableButton} from "./dom.js";
         const name = nameInput.value;
         const message = messageInput.value;
         const email = emailInput.value;
+        booleanList[0]=false;
+        booleanList[1]=false;
+        booleanList[2]=false;
         disableButton();
         alert("Greetings "+ name +", thank you for your message, wherein you wrote:\n "+ message +"\n" +
             "We'll respond to your question by mailing "+ email +" ASAP.");

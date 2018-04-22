@@ -1,0 +1,23 @@
+#Handin2
+Jeg har ændret layout til at følge "HolyGrail" formen.
+Derudover bruger CSS primært grids til layout.
+
+Opdelt JS og bygget det med webpack
+
+Har skrevet en lille komando for automatisk at bygge dist/main.js og hoste det med lite-server
+
+
+For at køre:
+npm install
+npm start
+
+Hvis der er problemer kør:
+npm rebuild
+
+Dependencies:
+Webpack
+Webpack cli
+Lite-server
+
+
+Alt link: https://xideta.github.io/
